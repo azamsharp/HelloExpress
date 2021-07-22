@@ -5,6 +5,8 @@ app.get('/hello', (req, res) => {
     res.json({'message': 'hello world'})
 })
 
-app.listen(3000, () => {
+const PORT = process.env.port || 3000
+
+app.listen(PORT, () => {
     console.log('Server is running')
 })
